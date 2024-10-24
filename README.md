@@ -1,2 +1,2 @@
 # MJT_Course
-Labs, Homeworks and Projects
+Labs, Homeworks and Project
