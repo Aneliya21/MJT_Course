@@ -2,15 +2,15 @@
 ## Final Course Project - MJT
 ___
 ### Project Overview
-###### The Smart Home Management System is a multi-user platform designed to manage smart devices across various rooms.
-###### It provides a centralized control for automation, power consumption tracking and data persistence.
+#### The Smart Home Management System is a multi-user platform designed to manage smart devices across various rooms.
+#### It provides a centralized control for automation, power consumption tracking and data persistence.
 
-###### The "User Home" Concept
+#### The "User Home" Concept
 To ensure data isolation and security, the system employs a sandbox folder architecture.
 Each user is assigned a dedicated directory within the */home/root*.
 This ensures that one user's configuration and device logs never interfere with another's.
 
-###### 📁 Package Structure
+#### 📁 Package Structure
 
 * ```api``` — **The Core Controller**
 
@@ -63,7 +63,7 @@ By separating the server from the api, we ensure that if you ever wanted to swit
 
 ___
 ### Components
-###### 📄 The Persistence Layer (IO)
+#### 📄 The Persistence Layer (IO)
 
 * **SmartHomeLogger**: Manages all file-based operations with two distinct modes:
 
@@ -79,7 +79,7 @@ ___
 
 **This structure allows for easy scalability and manual inspection if necessary.**
 
-###### 🤹🏻‍♀️ The Task System
+#### 🤹🏻‍♀️ The Task System
 * **PowerMonitoringTask**: A background thread that tracks energy consumption across all active devices over time, providing data for efficiency reports.
 
 
@@ -87,7 +87,7 @@ ___
 ___
 ### 🚀 Design Patterns & Principles
 
-###### Patterns Used
+#### Patterns Used
 * **Command Pattern**: Implemented in executeCommand to decouple the requester (the user) from the provider (the device logic).
 
 
@@ -99,7 +99,7 @@ ___
 
 * **Registry / Singleton**: The UserManager maintains a registry of active sessions to prevent duplicate logins and manage global user state.
 
-###### SOLID Principles
+#### SOLID Principles
 * **Interface Segregation**: Interfaces are kept lean, ensuring that device models only implement the functionality they actually require.
 
 
@@ -132,11 +132,11 @@ ___
 In a production environment, industry-standard hashing like BCrypt or Argon2 would be implemented.*
 ___
 ### System requirements
-- ###### Java Development Kit (JDK): Version 17 or higher (recommended).
+- #### Java Development Kit (JDK): Version 17 or higher (recommended).
 
-- ###### Network: Localhost access for Server/Client communication.
+- #### Network: Localhost access for Server/Client communication.
 
-- ###### Storage: Write permissions for the project root to create the /home/ directory structure.
+- #### Storage: Write permissions for the project root to create the /home/ directory structure.
 ___
 ### ❌ Troubleshooting
 
