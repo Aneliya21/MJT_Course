@@ -1,0 +1,33 @@
+package Labs.lab_06.solution.src.file.step;
+
+
+import Labs.lab_06.solution.src.file.File;
+import Labs.lab_06.solution.src.step.Step;
+
+/**
+ * A pipeline step that transforms the content of a {@link File} to uppercase.
+ * <p>
+ * This step modifies the {@link File} in place by converting its content
+ * to uppercase.
+ */
+public class UpperCaseFile implements Step<File, File> {
+
+    /**
+     * Converts the content of the given {@link File} to uppercase.
+     *
+     * @param input the file whose content will be transformed
+     * @return a new {@link File} object with updated content
+     *
+     * @throws IllegalArgumentException if the input file or its content is null
+     */
+    @Override
+    public File process(File input) {
+        if (input == null) {
+            throw new IllegalArgumentException("Input cannot be null");
+        }
+        String content = input.getContent();
+        input.setContent(content.toUpperCase());
+        return input;
+    }
+
+}
